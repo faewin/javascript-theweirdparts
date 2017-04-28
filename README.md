@@ -55,7 +55,7 @@ function b() {
     console.log('Called b!');
 }
 ```
-![execution](assets/hoisting.PNG "example image")
+![execution](assets/hoisting.png "example image")
 
 ```
 Global Object
