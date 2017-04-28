@@ -2,7 +2,22 @@
 
 This repository will contain JavaScript snippets and lessons learned through my studying hiatus.
 
-#### Vocabulary
+**What is a key/value pair?**
+
+```
+var name = 'leo';
+```
+
+**What is a object?**
+
+```
+var person = {
+    firstName: 'ed',
+    superpowers:  ['eat', 'sleep', 'code']
+};
+```
+
+### Vocabulary
 ```
 Syntax Parser
 ```
