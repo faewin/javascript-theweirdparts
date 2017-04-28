@@ -34,3 +34,30 @@ Lexical Environment
 Execution Context
 ```
 > A wrapper to help manage the code that is running.
+
+![execution](assets/executionContext.PNG "example image")
+
+```
+Global Object
+```
+> Anything that is not inside a function.
+
+```
+Hoisting
+```
+> When functions and variables get allocated to memory. Functions are set in there entirety while the variables value are set to 'undefined'.
+
+```javascript
+b(); // => 'Called b!'
+console.log(a); // => 'undefined'
+var a = 'Hello there';
+function b() {
+    console.log('Called b!');
+}
+```
+![execution](assets/hoisting.PNG "example image")
+
+```
+Global Object
+```
+> Anything that is not inside a function.
