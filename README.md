@@ -179,3 +179,26 @@ Associativity
 > What order operator functions get called in: **left-to-right** or **right-to-left**. When functions have the same precedence.
 
 [reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+
+```
+Coercion
+```
+
+> Converting a value from one type to another.
+
+```javascript
+var a = 1 + '2';
+console.log(a);   //=> '12' javascript coerced the values together.
+
+// Another Example
+
+console.log(3 < 2 < 1); //=> true
+// < - left to right associativity.
+// (3 < 2 < 1) ==> (false < 1)
+// Then javascript coerced false; Example:
+Number('3'); //=> 3
+Number(false); // => 0
+// (false < 1) ==> (0 < 1) ==> true
+```
+
+**Pro Tip**: Use '===' equality in your code, because it wont try to coerce the values. Thus you wont get an unexpected surprise.
