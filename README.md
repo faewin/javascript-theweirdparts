@@ -4,13 +4,13 @@ This repository will contain JavaScript snippets and lessons learned through my 
 
 **What is a key/value pair?**
 
-```
+```javascript
 var name = 'leo';
 ```
 
 **What is a object?**
 
-```
+```javascript
 var person = {
     firstName: 'ed',
     superpowers:  ['eat', 'sleep', 'code']
