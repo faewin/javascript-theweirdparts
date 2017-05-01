@@ -95,6 +95,7 @@ Variable Enviroment
 ```
 Scope
 ```
+
 > Where a variable is available in your code and if its truly the same variable or a new copy.
 > **Pro Tip**: Every execution context has a reference to its outer enviroment and that is how *scope* works in javascript.
 ![scope](assets/scope.png "example of scope")
