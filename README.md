@@ -81,7 +81,7 @@ Invocation
 
 ```
 foo()
-````
+```
 
 > Everything a function is called, a new execution context is created for that function.
 
