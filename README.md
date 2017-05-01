@@ -73,3 +73,15 @@ Single Threaded
 Synchronous
 ```
 > One command is executed at a time and in order.
+
+```
+Invocation
+```
+> Running a function
+
+```javascript
+foo()
+````
+
+> Everything a function is called, a new execution context is created for that function.
+![execution](assets/ecStack.png "example of execution context stack")
