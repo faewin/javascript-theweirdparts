@@ -127,3 +127,55 @@ Asynchronous
 > **Pro Tip**: The event queue wont be processed *until* the execution stack is empty. Until javascript is finished running all of that other code line by line. So it really isn't asynchronous.
 
 > What's happening is the browser asynchronously is putting things into the event queue.
+
+```
+Dynamic Typing
+```
+
+> In javascript you don't tell the engine what type of data a variable holds, it figures it out while your code running
+
+```
+Static Typing
+```
+
+> In java however static typing is used and it will freak out if you give a variable that does not match the data type.
+
+```java
+bool isThere = 'hello' // => ERROR
+```
+
+```
+Primitive Type
+```
+
+> A type of data that represents a single value and that is not an object.
+> There are 6 types of primitive data:
+
+```
+undefined
+null
+boolean
+number
+string
+symbol
+```
+
+```
+Operator
+```
+
+> A special function that is syntactically (written) differently. Generally operators take two parameters and return one result.
+
+```
+Operator Precedence
+```
+
+> Which operator function gets called first. Higher precedence wins.
+
+```
+Associativity
+```
+
+> What order operator functions get called in: **left-to-right** or **right-to-left**. When functions have the same precedence.
+
+[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
