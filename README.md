@@ -61,3 +61,15 @@ function b() {
 Global Object
 ```
 > Anything that is not inside a function.
+
+> Pro Tip: Never set a variable to *undefined*, let javascript engine do its thing.
+
+```
+Single Threaded
+```
+> One command is executed at a time.
+
+```
+Synchronous
+```
+> One command is executed at a time and in order.
