@@ -17,6 +17,9 @@ var person = {
 };
 ```
 
+> Objects have references to all the properties and methods its connected to.
+![object](assets/objects.png "object references")
+
 ### Vocabulary
 ```
 Syntax Parser
@@ -202,3 +205,32 @@ Number(false); // => 0
 ```
 
 **Pro Tip**: Use '===' equality in your code, because it wont try to coerce the values. Thus you wont get an unexpected surprise.
+
+```
+Namespace
+```
+
+> A container for variables and functions. Typically to keep variables and functions with the *same* name separate.
+
+```javascript
+// Same function name but not the same because there in a different container.
+var english  = { greet: 'hello' };
+var spanish  = { greet: 'hola'  };
+```
+
+
+> JSON and object literals are not the same. JSON is stricter in the sense that needs to written in a certain way.
+
+![function](assets/function.png "function example")
+
+```
+First Class Functions
+```
+
+> Everything you can do with other types you can do with functions. Assign them to variables, pass them around, create them on the fly.
+
+```
+Expression
+```
+
+> Unit of code that results in a value. It doesn't have to save to a variable.

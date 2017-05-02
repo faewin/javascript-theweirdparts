@@ -38,7 +38,16 @@ function clickHandler() {
     console.log('click event!');
 }
 
-doucment.addEventListener('click', clickHandler);
+document.addEventListener('click', clickHandler);
 
 waitThreeSec();
 console.log('finished execution');
+
+// Example that functions are objects in javascript
+
+function greet() {
+    console.log('hi');
+}
+
+greet.language = 'eng';
+console.log(greet.language); //=> 'eng'
