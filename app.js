@@ -108,3 +108,66 @@ var p = {
 }
 
 p.print();
+
+function add(n1, n2, cb) {
+    console.log(n1+n2);
+    cb();
+}
+
+function logCompletion() {
+    console.log('Addition has been completed.');
+}
+
+add(10,10,logCompletion);
+
+// Example of bind()
+// Bind creates a copy
+
+var person = {
+    fName: 'ed',
+    lName: 'fr',
+    getFullName: function() {
+        var name = this.fName + ' ' + this.lName;
+        return name;
+    }
+}
+
+function logName() {
+    console.log(this.getFullName); // At this point this is pointing to the global object until it sees bind in the next line
+}
+
+logName.bind(person) //=> 'ed fr'
+
+// Example of call() and apply()
+// Directly executes code and does not create a copy.
+// Only difference is that apply() takes arguments as an array.
+
+var person2 = {
+    fName: 'me',
+    lName: 'li',
+    getFullName: function() {
+        var name = this.fName + ' ' + this.lName;
+        return name;
+    }
+}
+
+function logName2(sex, eyeColor) {
+    console.log(this.getFullName());
+    console.log('< more info: ' + sex + ' ' + eyeColor +' >');
+    console.log('---------------');
+}
+
+logName2.call(person2, 'male', 'blue'); //=> 'me li < more info: male blue >'
+logName2.apply(person2, ['male', 'blue']); //=> 'me li < more info: male blue >'
+
+// How can you apply this methods in a real enviroment?
+// When you want to borrow a function
+// Example:
+
+var person3 = {
+    fName: 'jm',
+    lName: 'bd'
+}
+
+// Borrowing function from the original person object and using it on person3
+console.log(person.getFullName.call(person3)); // => 'jm bd'

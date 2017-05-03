@@ -282,7 +282,7 @@ White Space
 
 ```
 Closure
-````
+```
 
 ![closure](assets/closure.png "closure example")
 
@@ -335,3 +335,86 @@ esGreeting('ed', 'fr');
 > **Key Point**: Realizing that every time you call a function it gets its own execution context.
 
 ![factory](assets/factory.png "factory function example")
+
+```
+Callback Function
+```
+
+> A function you give to another function, to be run when the other function is finished. Example
+
+```javascript
+function add(n1, n2, cb) {
+    console.log(n1+n2);
+    cb();
+}
+
+function logCompletion() {
+    console.log('Addition has been completed.');
+}
+
+add(10,10,logCompletion);
+```
+
+> Functions come with method call(), apply(), and bind(). Which are all related to 'this'.
+
+![cab] (assets/cab.png "call apply and bind methods")
+
+```javascript
+// Example of bind()
+// Bind creates a copy
+
+var person = {
+    fName: 'ed',
+    lName: 'fr',
+    getFullName: function() {
+        var name = this.fName + ' ' + this.lName;
+        return name;
+    }
+}
+
+function logName() {
+    console.log(this.getFullName); // At the moment 'this' is pointing to the global object until it sees bind
+}
+
+logName.bind(person) //=> 'ed fr'
+
+// Example of call() and apply()
+// Directly executes code and does not create a copy.
+// Only difference is that apply() takes arguments as an array.
+
+var person2 = {
+    fName: 'me',
+    lName: 'li',
+    getFullName: function() {
+        var name = this.fName + ' ' + this.lName;
+        return name;
+    }
+}
+
+function logName2(sex, eyeColor) {
+    console.log(this.getFullName());
+    console.log('< more info: ' + sex + ' ' + eyeColor +' >');
+    console.log('---------------');
+}
+
+logName2.call(person2, 'male', 'blue'); //=> 'me li < more info: male blue >'
+logName2.apply(person2, ['male', 'blue']); //=> 'me li < more info: male blue >'
+
+// How can you apply this methods in a real enviroment?
+// When you want to borrow a function
+// Example:
+
+var person3 = {
+    fName: 'jm',
+    lName: 'bd'
+}
+
+// Borrowing function from the original person object and using it on person3
+console.log(person.getFullName.call(person3)); // => 'jm bd'
+```
+
+```
+Function Currying
+```
+
+> Creating a copy of a function but with some preset parameters
