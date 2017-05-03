@@ -75,3 +75,36 @@ c.greet = 'yo';
 
 console.log(c); // greet value changes in both c & d
 console.log(d); //
+
+
+//  Working with 'this'
+//  Both examples below this references to the window. Thus when you create a property youre creating a global variable
+
+
+console.log(this); //=> Window
+
+function foobar() {
+    console.log(this); //=> Window
+    this.property = 'my property'; // Global variable
+}
+
+foobar();
+console.log(this.property); //=> my property
+
+var p = {
+    name: 'The P object',
+    print: function() {
+        var that = this; //=> becuase 'this' is an object then 'that' knows the location byReference'. meaning they point to the same thing
+        this.name = 'Updated P object'; //=> 'this' points to the p object
+        console.log(this);
+
+        var print2 = function() {
+            this.name = 'Updated2 P object'; //=> 'this' points to global object. But if I used 'that' the issue will be what i expect it to be.
+            console.log(this);
+        }
+
+        print2()
+    }
+}
+
+p.print();
