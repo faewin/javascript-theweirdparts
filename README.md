@@ -272,10 +272,66 @@ Value vs Reference
 Arguments
 ```
 
-> The paramaters you pass to a function
+> The parameters you pass to a function
 
 ```
 White Space
 ```
 
-> Invisiable characters that create literal 'space' in your written code. Example: space, tabs, returns
+> Invisible characters that create literal 'space' in your written code. Example: space, tabs, returns
+
+```
+Closure
+````
+
+![closure](assets/closure.png "closure example")
+
+```javascript
+function buildFunctions() {
+    var arr = [];
+
+    for (var i = 0; i < 3; i++) {
+        arr.push( function() {
+            console.log(i);
+        });
+    }
+
+    return arr;
+}
+
+var fs = buildFunctions();
+
+// i - is three by the time you call all these functions.
+
+fs[0](); //=> 3
+fs[1](); //=> 3
+fs[2](); //=> 3
+
+```
+
+![buildFS](assets/bfs.png "build functions example")
+
+```javascript
+// Factory
+
+function makeGreeting(language) {
+    return function(fName, lName) {
+        if ( language === 'en' ) {
+            console.log('hello ' + fName + ' ' + lName);
+        }
+
+        if ( language === 'es' ) {
+            console.log('hola ' + fName + ' ' + lName);
+        }
+    }
+}
+
+var enGreeting = makeGreeting('en');
+var esGreeting = makeGreeting('es');
+
+enGreeting('ed', 'fr');
+esGreeting('ed', 'fr');
+```
+> **Key Point**: Realizing that every time you call a function it gets its own execution context.
+
+![factory](assets/factory.png "factory function example")

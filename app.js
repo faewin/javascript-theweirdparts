@@ -94,7 +94,7 @@ console.log(this.property); //=> my property
 var p = {
     name: 'The P object',
     print: function() {
-        var that = this; //=> becuase 'this' is an object then 'that' knows the location byReference'. meaning they point to the same thing
+        var that = this; //=> because 'this' is an object then 'that' knows the location byReference'. meaning they point to the same thing
         this.name = 'Updated P object'; //=> 'this' points to the p object
         console.log(this);
 
