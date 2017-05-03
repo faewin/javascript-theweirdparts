@@ -267,3 +267,15 @@ Value vs Reference
 
 ![value](assets/byValue.png "value")
 ![ref](assets/byRef.png "ref")
+
+```
+Arguments
+```
+
+> The paramaters you pass to a function
+
+```
+White Space
+```
+
+> Invisiable characters that create literal 'space' in your written code. Example: space, tabs, returns
