@@ -234,3 +234,36 @@ Expression
 ```
 
 > Unit of code that results in a value. It doesn't have to save to a variable.
+```javascript
+var a;
+a = 3; //=> 3
+1+2;   //=> 3
+```
+
+> Function expressions are **not** hoisted.
+
+```javascript
+greet(); //=> undefined is not a function
+var greet = function() {
+    console.log('hi');
+}
+```
+
+```
+Mutate
+```
+
+> To change something.
+
+```
+Immutable
+```
+
+> Can't be changed.
+
+```
+Value vs Reference
+```
+
+![value](assets/byValue.png "value")
+![ref](assets/byRef.png "ref")

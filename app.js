@@ -51,3 +51,27 @@ function greet() {
 
 greet.language = 'eng';
 console.log(greet.language); //=> 'eng'
+
+// Example of value vs reference.
+// Primitives will be by value while Objects will be by reference.
+
+// Value; makes a copy
+var x = 3;
+var y;
+
+y = x;
+x = 2;
+
+console.log(x); //=> 2
+console.log(y); //=> 3
+
+// Reference; All objects and functions point to the same same location. No copies
+
+var c = { greet: 'hello'};
+var d;
+
+d = c;
+c.greet = 'yo';
+
+console.log(c); // greet value changes in both c & d
+console.log(d); //
