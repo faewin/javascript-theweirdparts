@@ -418,3 +418,39 @@ Function Currying
 ```
 
 > Creating a copy of a function but with some preset parameters
+
+```
+Inheritance
+```
+
+> One object gets access to the properties and methods of another object.
+> There is two different types of inheritance **classical** and **prototypal**.
+
+![proto] (assets/protoChain.png "proto example")
+
+> Everything in javascript is an object or a primitive
+
+```
+Reflection
+```
+> An object can look at itself, listing and changing its properties and methods.
+
+```
+Function Constructor
+```
+
+> A normal function that is used to construct objects
+
+> It's dangerous to use function constructors, the built in ones for primitives. Ex: new Number, new String etc.
+
+```
+Polyfill
+```
+
+> Code that adds a feature which the engine may lack.
+
+```
+Syntactic Sugar
+```
+
+> A different way to *type* something that doesn't change how it works under the good.

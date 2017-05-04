@@ -71,3 +71,44 @@ console.log(list3);
 
 var evenList = _.filter(nums, function(item) { return item % 2 === 0});
 console.log(evenList);
+
+// ===============================================
+// ===============================================
+
+// Demo Inheritance from proto ~
+var person = {
+    fName: 'default',
+    lName: 'default',
+    fullName: function() {
+        return this.fName + " " + this.lName
+    }
+};
+
+var ed = {
+    fName: 'ed',
+    lName: 'fr'
+};
+
+var james = {
+    fName: 'james'
+};
+
+// Don't ever do this; for demo purposes
+ed.__proto__ = person;
+console.log(ed.fullName());
+
+james.__proto__ = person;
+console.log(james.fullName()); //=> 'james default'
+
+// Example of reflection
+
+for (var prop in ed) {
+    if (ed.hasOwnProperty(prop)) {
+        console.log(prop);
+    }
+}
+
+// Using _underscore.js for extending
+
+_.extend(person, ed, james);
+console.log(james);
