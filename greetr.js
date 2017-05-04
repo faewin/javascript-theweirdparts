@@ -10,6 +10,7 @@
         this.firstName = firstName || '';
         this.lastName = lastName   || '';
         this.language = language   || 'en';
+        this.validate();
     }
 
     var supportedLangs = ['en', 'es'];
@@ -55,7 +56,14 @@
             this.language = lang;
             this.validate();
             return this;
+        },
+
+        HTMLgreeting: function(selector) {
+            $(selector).text(this.greeting());
+            return this;
         }
+
+
     };
 
     Greetr.initialize.prototype = Greetr.prototype;
