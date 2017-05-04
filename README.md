@@ -454,3 +454,9 @@ Syntactic Sugar
 ```
 
 > A different way to *type* something that doesn't change how it works under the good.
+
+```
+Method Chaining
+```
+
+> Calling one method after another, and each method affects the parent object.
